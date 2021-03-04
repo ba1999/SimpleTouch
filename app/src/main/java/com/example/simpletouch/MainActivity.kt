@@ -1,5 +1,6 @@
 package com.example.simpletouch
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.GestureDetector
@@ -12,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var mGestDetector : GestureDetector
     private val tvGesture : TextView by lazy { findViewById(R.id.tvGesture)}
+    private val touchview : TouchView by lazy { findViewById(R.id.touchView)}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         val mGListener = MyGestureListener()
         mGestDetector = GestureDetector(this, mGListener)
+
+        touchview.setBackgroundColor(Color.BLUE)
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
