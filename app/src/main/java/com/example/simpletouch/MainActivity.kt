@@ -32,6 +32,8 @@ class MainActivity : AppCompatActivity() {
     //eigenen GestureListener implementieren als inner class, um auf Variablen zugreifen zu können
     inner class MyGestureListener() : GestureDetector.SimpleOnGestureListener() {
         override fun onDown(e: MotionEvent?): Boolean {
+            touchview.setCircle(Math.round(e!!.x), Math.round(e.y), 20)
+            touchview.invalidate()
             tvGesture.text = getString(R.string.position_down,
                     e!!.x.toString(), e.y.toString())
             return true

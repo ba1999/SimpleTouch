@@ -4,12 +4,15 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.graphics.Point
 import android.util.AttributeSet
 import android.view.View
 
 class TouchView(context : Context?, attrs : AttributeSet?) : View(context, attrs){
 
     private var paint: Paint
+
+    private var circlePoint = Point()
     private var circleRadius = 20
 
     init {
@@ -25,10 +28,12 @@ class TouchView(context : Context?, attrs : AttributeSet?) : View(context, attrs
     }
 
     override fun onDraw(canvas: Canvas?) {
-        val height = canvas!!.height
-        val width = canvas.width
+        canvas!!.drawCircle(circlePoint.x.toFloat(), circlePoint.y.toFloat(), circleRadius.toFloat(), paint)
+    }
 
-        // Kreis in der Mitte des Views
-        canvas.drawCircle((width/2).toFloat(), (height/2).toFloat(), circleRadius.toFloat(), paint)
+    fun setCircle(x: Int, y: Int, radius: Int){
+        circlePoint.x = x
+        circlePoint.y = y
+        circleRadius = radius
     }
 }
