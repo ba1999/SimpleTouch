@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SimpleTouch</string>
+
+    <string name="position_down">onDown: Position %1$s, %2$s</string>
+    <string name="position_longPress">onLongPress: Position %1$s, %2$s</string>
+    <string name="position_fling">onFling: von %1$s, %2$s bis %3$s, %4$s</string>
+</resources>
