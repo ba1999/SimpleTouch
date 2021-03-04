@@ -23,11 +23,10 @@ class MainActivity : AppCompatActivity() {
         mGestDetector = GestureDetector(this, mGListener)
 
         touchview.setBackgroundColor(Color.BLUE)
-    }
 
-    override fun onTouchEvent(event: MotionEvent?): Boolean {
-        this.mGestDetector.onTouchEvent(event)
-        return super.onTouchEvent(event)
+        touchview.setOnTouchListener { v, e->
+            mGestDetector.onTouchEvent(e)
+        }
     }
 
     //eigenen GestureListener implementieren als inner class, um auf Variablen zugreifen zu können
