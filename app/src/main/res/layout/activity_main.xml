@@ -6,22 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tvGesture"
+    <com.example.simpletouch.TouchView
+        android:id="@+id/touchView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.example.simpletouch.TouchView
-        android:id="@+id/touchView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/start_time"
+        android:textColor="@color/colorAccent"
+        android:textSize="36sp"
+        app:layout_constraintLeft_toLeftOf="@id/touchView"
+        app:layout_constraintRight_toRightOf="@id/touchView"
+        app:layout_constraintTop_toTopOf="@id/touchView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

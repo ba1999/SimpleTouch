@@ -4,4 +4,6 @@
     <string name="position_down">onDown: Position %1$s, %2$s</string>
     <string name="position_longPress">onLongPress: Position %1$s, %2$s</string>
     <string name="position_fling">onFling: von %1$s, %2$s bis %3$s, %4$s</string>
+    <string name="start_time">Klicke für Spielbeginn</string>
+    <string name="timeString">Deine Zeit: %1$s ms</string>
 </resources>
